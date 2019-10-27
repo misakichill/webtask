@@ -47,7 +47,7 @@ a:visited {
     width: 98rem;
     height: 7.7rem;
     max-width: 1170px;
-    margin: 0rem auto ;
+    margin: 0 auto ;
     padding: 2.1rem 3.7rem;
     background-color: #fff;
     border-radius: .2rem;
@@ -60,25 +60,33 @@ a:visited {
     height: 3.4rem;
 }
 .header-menu {
-    flex-basis: 62rem;
+    width: 61rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 .menu-title {
-    flex-grow: 1;
+    display: table;
     font-size: 1.4rem;
     color: #000;
-    text-align: center;
 }
-.menu-title + .menu-title {
-    border-left: 1px solid #333;
+.menu-title > a {
+    display: table-cell;
+}
+.menu-title:before {
+    content: '|';
+    padding: 0 5rem;
+}
+.menu-title:first-child:before {
+    content: '';
 }
 .menu-title > a:after {
     display: block;
     color: #777;
     font-size: 1rem;
     padding-top: 1rem;
+    margin: 0 auto;
+    text-align: center;
 }
 .menu-title:nth-child(1) > a:after {
     content: "企業情報";
@@ -99,6 +107,7 @@ a:visited {
     margin: 0 auto;
 }
 .main-title {
+    display: inline-block;
     font-family: 'Noto Sans CJK JP';
     font-size: 4.3rem;
     font-weight: 300;
@@ -199,6 +208,10 @@ a:visited {
     position: relative;
     top: -4.5rem;
 }
+.news-article-wrap > a {
+    display: block;
+    cursor: pointer;
+}
 .news-article {
     position: relative;
     width: 95.4rem;
@@ -219,19 +232,19 @@ a:visited {
     text-align: center;
     padding: .7rem .7rem .7rem 1rem;
 }
-.news-title1 {
+.news-title-orange {
     color: #E5A31C;
     border: 1px solid #E5A31C;
 }
-.news-title2 {
+.news-title-red {
     color: #D4004E;
     border: 1px solid #D4004E;
 }
-.news-title3 {
+.news-title-green {
     color: #5FA153;
     border: 1px solid #5FA153;
 }
-.news-title4 {
+.news-title-blue {
     color: #50BBF4;
     border: 1px solid #50BBF4;
 }
